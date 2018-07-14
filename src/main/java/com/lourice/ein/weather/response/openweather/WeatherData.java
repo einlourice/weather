@@ -1,4 +1,4 @@
-package com.lourice.ein.weather.response.json;
+package com.lourice.ein.weather.response.openweather;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

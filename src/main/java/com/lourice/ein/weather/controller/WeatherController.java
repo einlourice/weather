@@ -1,6 +1,6 @@
 package com.lourice.ein.weather.controller;
 
-import com.lourice.ein.weather.response.json.WeatherApiResponse;
+import com.lourice.ein.weather.response.openweather.WeatherApiResponse;
 import com.lourice.ein.weather.service.OpenWeatherMapRestService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

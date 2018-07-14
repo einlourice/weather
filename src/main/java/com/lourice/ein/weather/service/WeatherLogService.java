@@ -1,7 +1,7 @@
 package com.lourice.ein.weather.service;
 
 import com.lourice.ein.weather.domain.WeatherLog;
-import com.lourice.ein.weather.response.json.WeatherApiResponse;
+import com.lourice.ein.weather.response.openweather.WeatherApiResponse;
 
 import java.util.List;
 

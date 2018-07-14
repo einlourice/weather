@@ -3,10 +3,10 @@ package com.lourice.ein.weather.service;
 import com.google.common.collect.Lists;
 import com.lourice.ein.weather.domain.WeatherLog;
 import com.lourice.ein.weather.repository.WeatherLogRepository;
-import com.lourice.ein.weather.response.json.Main;
-import com.lourice.ein.weather.response.json.Weather;
-import com.lourice.ein.weather.response.json.WeatherApiResponse;
-import com.lourice.ein.weather.response.json.WeatherData;
+import com.lourice.ein.weather.response.openweather.Main;
+import com.lourice.ein.weather.response.openweather.Weather;
+import com.lourice.ein.weather.response.openweather.WeatherApiResponse;
+import com.lourice.ein.weather.response.openweather.WeatherData;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 

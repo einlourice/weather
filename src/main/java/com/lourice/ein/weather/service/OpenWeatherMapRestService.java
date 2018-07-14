@@ -1,13 +1,16 @@
 package com.lourice.ein.weather.service;
 
 import com.lourice.ein.weather.config.WeatherProperties;
-import com.lourice.ein.weather.response.json.WeatherApiResponse;
+import com.lourice.ein.weather.constant.Location;
+import com.lourice.ein.weather.response.openweather.WeatherApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import static com.lourice.ein.weather.constant.Location.*;
 
 @Service
 public class OpenWeatherMapRestService {
@@ -40,7 +43,12 @@ public class OpenWeatherMapRestService {
         return weatherApiResponse;
     }
 
+    private String buildIdParams(String[] locations){
+        return "&id=" + String.join(",", locations);
+    }
+
     private String getServiceUrl(){
-        return this.BASE_URL + "&id=2643743,3067696,5391959";
+        String idParams = buildIdParams(new String[]{LONDON.getId(), PRAGUE.getId(), SAN_FRANCISCO.getId()});
+        return this.BASE_URL + idParams;
     }
 }
